@@ -7,3 +7,6 @@ Following is the tech-stack for this sample.
 - [x] Dagger : Dependency injector to create repository obj. 
 - [x] Mockito : To mock the dependency.
 - [x] TDD: Presenter contains all the business logic. The test cases for it is also written which has code coverage ~95%.
+- [x] Errors: Handled network connection, API, parsing error and showed toast on UI to notify user.
+
+Note: The UI of this application is very simple which is showing the title of the venue.  
