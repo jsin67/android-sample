@@ -1,7 +1,6 @@
 package com.costa.jaggratsample
 
 import com.costa.jaggratsample.models.*
-import com.costa.jaggratsample.network.api.PopularPlaceApi
 import com.costa.jaggratsample.presenter.SearchPopularPlacePresenter
 import com.costa.jaggratsample.repository.PopularPlaceRepository
 import com.costa.jaggratsample.view.SearchView

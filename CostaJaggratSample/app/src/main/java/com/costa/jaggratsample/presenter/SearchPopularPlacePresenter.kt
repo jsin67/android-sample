@@ -11,10 +11,10 @@ import javax.inject.Inject
 
 class SearchPopularPlacePresenter constructor(view: SearchView): BasePresenter<BaseView>(view), PopularPlaceRepository.RepositoryCallBack {
 
-    private val searchView = view;
+    private val searchView = view
 
     @Inject
-    lateinit var repository: PopularPlaceRepository;
+    lateinit var repository: PopularPlaceRepository
 
 
     /**
@@ -35,6 +35,7 @@ class SearchPopularPlacePresenter constructor(view: SearchView): BasePresenter<B
     }
 
     fun noInternetConnection() {
+        searchView.showPlaces(emptyList())
         searchView.showError(INTERNET_MESSAGE)
     }
     /**
@@ -56,7 +57,7 @@ class SearchPopularPlacePresenter constructor(view: SearchView): BasePresenter<B
      */
     override fun onResponse(json: ResponseJSON?, error: Throwable?) {
         searchView.stopLoading()
-        if(json?.response != null && !json?.response?.groups.isEmpty()){
+        if(json?.response != null && !json.response.groups.isEmpty()){
             searchView.showPlaces(prepareUIModel(json))
         } else {
             searchView.showError(ERROR_MESSAGE)
@@ -72,7 +73,7 @@ class SearchPopularPlacePresenter constructor(view: SearchView): BasePresenter<B
      */
     private fun prepareUIModel(json: ResponseJSON?): List<Venue>{
         val venue = arrayListOf<Venue>()
-        json?.response?.groups?.forEach { it.items.forEach{ venue.add(it.venue)} }
+        json?.response?.groups?.forEach { it.items.forEach{ nested -> venue.add(nested.venue)} }
         return venue
     }
 }

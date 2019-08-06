@@ -18,7 +18,7 @@ import javax.inject.Inject
 
 class SearchPopularPlaceActivity : BaseActivity<SearchPopularPlacePresenter>(), SearchView {
     @Inject
-    lateinit var searchPopularPlacePresenter: SearchPopularPlacePresenter;
+    lateinit var searchPopularPlacePresenter: SearchPopularPlacePresenter
     private lateinit var progressBar: ProgressBar
     private val adapter = PlaceAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +45,7 @@ class SearchPopularPlaceActivity : BaseActivity<SearchPopularPlacePresenter>(), 
     }
 
     override fun instantiatePresenter(): SearchPopularPlacePresenter {
-        searchPopularPlacePresenter  = SearchPopularPlacePresenter(this);
+        searchPopularPlacePresenter  = SearchPopularPlacePresenter(this)
         return searchPopularPlacePresenter
     }
 

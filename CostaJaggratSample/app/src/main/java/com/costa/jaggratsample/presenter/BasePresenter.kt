@@ -6,15 +6,13 @@ import com.costa.jaggratsample.view.BaseView
 /**
  * Base presenter for initialization for its implementation
  */
-abstract class BasePresenter<V> (view: BaseView) {
+abstract class BasePresenter<V> constructor(protected val view: BaseView) {
 
     private val injector: PresenterComponent = DaggerPresenterComponent.builder().networkModule(NetworkModule).build()
 
     init {
         inject()
     }
-
-    protected var view: BaseView = view
 
     /**
      * Injector for presenter.
