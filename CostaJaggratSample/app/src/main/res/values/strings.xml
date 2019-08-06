@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CostaJaggratSample</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="find">Find</string>
+    <string name="hint_place">London</string>
+    <string name="client_id" templateMergeStrategy="preserve" translatable="false">
+        UES4RVH1XKZGTYZYLUEO5A4T0UIXXCMFCIQHT0YJ2E0VDACF
+    </string>
+    <string name="client_secret" templateMergeStrategy="preserve" translatable="false">
+        IVI0UQ1TDCMIH3U310EW3JFZLVQG3ZLEU2ERD2BDID3AS0S1
+    </string>
+</resources>
